@@ -1,66 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ☕ KedaiSeduh
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Platform Pemesanan Menu & Reservasi Meja Cafe — Bertema Premium Dark**
 
-## About Laravel
+KedaiSeduh adalah aplikasi web untuk menemukan cafe, memesan menu secara online, dan melakukan reservasi meja. Dibangun dengan **Laravel 11** dan antarmuka *premium dark* yang elegan, ringan, dan sepenuhnya responsif. Aplikasi ini menerapkan **Role-Based Access Control (RBAC)** dengan tiga jenis pengguna: Customer, Vendor, dan Admin.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Mata Kuliah Pemrograman Web — Tugas Besar
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🌟 Fitur Utama
 
-## Learning Laravel
+### 👤 Customer (Pelanggan)
+- Menjelajahi daftar cafe yang tersedia beserta detailnya (alamat, deskripsi, jam operasional, fasilitas, galeri).
+- Melihat menu beserta status ketersediaan dan kategori.
+- Menambahkan menu ke **keranjang** dan melakukan **checkout**.
+- Pembayaran fleksibel: **Tunai (cash)** atau **QRIS** (simulasi scan).
+- **Reservasi meja** (booking) dengan pilihan jumlah orang & catatan.
+- Melacak **riwayat & status pesanan**, konfirmasi selesai, dan mengirim komplain.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🏪 Vendor (Pemilik Cafe)
+- **Dashboard** ringkasan (total pesanan, pesanan baru, pesanan dibayar, total menu).
+- **Kelola Menu** (CRUD) lengkap dengan harga, kategori, gambar, dan status.
+- **Kelola Pesanan** masuk + update status + tampilkan QRIS.
+- **Kelola Reservasi/Booking** (konfirmasi / tolak).
+- **Kelola Meja** (CRUD) dengan kapasitas orang.
+- **Kelola Profil Cafe & Galeri** + toggle status Buka/Tutup.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🛡️ Admin (Administrator)
+- **Dashboard analitik** (jumlah vendor aktif/pending, jumlah customer, statistik & pendapatan per cafe).
+- **Approve / Reject** pendaftaran cafe baru.
+- Memantau seluruh **transaksi & booking** (dengan filter & pencarian).
+- **Suspend / aktifkan** akun customer.
+- **Manajemen laporan/komplain** dari pengguna.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🎨 Desain
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Tema **Premium Dark** — latar espresso gelap dengan aksen emas hangat (*gold/amber*), tipografi **Playfair Display** (judul) + **Inter** (teks).
+- 100% **Mobile Responsive** (sidebar hamburger untuk panel Vendor & Admin).
+- Mikro-interaksi: password visibility, tombol loading state, hover elegan, sticky navigation.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 🛠️ Teknologi
 
-## Contributing
+| Lapisan | Teknologi |
+|--------|-----------|
+| Backend | PHP 8.2, **Laravel 11** (MVC, Query Builder) |
+| Frontend | Blade, **Tailwind CSS** (CDN), Vanilla JS |
+| Database | **MySQL** / MariaDB |
+| Chart | Chart.js |
+| Ikon & Font | Font Awesome 6, Google Fonts |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🚀 Cara Instalasi (Local Development)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Pastikan sudah terpasang **PHP 8.2+**, **Composer**, dan **MySQL** (disarankan pakai [Laragon](https://laragon.org/)).
 
-## Security Vulnerabilities
+```bash
+# 1. Clone repository
+git clone https://github.com/USERNAME-KAMU/kedaiseduh.git
+cd kedaiseduh
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# 2. Install dependency
+composer install
 
-## License
+# 3. Siapkan file environment
+cp .env.example .env
+php artisan key:generate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 4. Buat database kosong bernama "kedaiseduh" di MySQL/phpMyAdmin,
+#    lalu sesuaikan konfigurasi DB di file .env bila perlu.
+
+# 5. Jalankan migrasi + data awal (seeder)
+php artisan migrate --seed
+
+# 6. Jalankan server
+php artisan serve
+```
+
+Buka **http://localhost:8000** di browser.
+
+> Jika memakai Laragon, cukup akses `http://kedaiseduh.test` (pretty URL) setelah menjalankan langkah 1–5.
+
+---
+
+## 🔑 Akun Demo
+
+Semua akun memakai password: **`password`**
+
+| Role | Email | Keterangan |
+|------|-------|-----------|
+| Admin | `admin@kedaiseduh.test` | Panel admin |
+| Vendor | `vendor1@kedaiseduh.test` | Pemilik cafe **Seduh Senja** |
+| Vendor | `vendor2@kedaiseduh.test` | Pemilik cafe **Nocturnal Brew** |
+| Vendor | `vendor3@kedaiseduh.test` | Vendor baru (belum punya cafe — untuk demo setup) |
+| Customer | `budi@kedaiseduh.test` | Pelanggan |
+| Customer | `ayu@kedaiseduh.test` | Pelanggan |
+
+---
+
+## 🗂️ Struktur Database (ringkas)
+
+`users` · `cafe` · `cafe_table` · `menu` · `gallery` · `transaksi` · `transaksi_detail` · `booking` · `reports`
+
+Seluruh skema dibuat melalui **migration** dan diisi otomatis melalui **seeder**, sehingga aplikasi langsung siap dipakai setelah `php artisan migrate --seed`.
+
+---
+
+## 👨‍💻 Author
+
+- **[Nama Lengkap Kamu]** — **[NIM]**
+
+Program Studi Informatika · Fakultas Ilmu Komputer · Universitas Mercu Buana
